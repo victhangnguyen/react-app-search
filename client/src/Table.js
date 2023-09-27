@@ -11,9 +11,9 @@ function Table({ data }) {
         </tr>
       </thead>
       <tbody>
-        {data?.map((item) => {
+        {data?.map((item, index) => {
           return (
-            <tr>
+            <tr key={`tr-${index}`}>
               <th>{item.first_name}</th>
               <th>{item.last_name}</th>
               <th>{item.email}</th>
